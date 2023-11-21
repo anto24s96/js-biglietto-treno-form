@@ -10,30 +10,69 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-     <div class="container">
-        <div class="row">
-            <div class="col-5">
-                <label for="name_surname" class="pb-3">Nome Cognome</label>
-                <input type="text" class="form-control" id="name_surname" placeholder="Nome Cognome">            
+    <div class="ticket-container p-5">
+        <div class="container border rounded-4">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="top-title text-center mt-3 mb-5">
+                        <h1 class="border-bottom">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                    </div>
+                </div>
+                <div class="col-4 text-center">
+                    <label for="name_surname" class="pb-3">Nome Cognome</label>
+                    <input type="text" class="form-control" id="name_surname" placeholder="Nome Cognome">            
+                </div>
+                <div class="col-4 text-center">
+                    <label for="km" class="pb-3">Km da percorrere</label>
+                    <input type="text" class="form-control" name="km" id="km" placeholder="Kilometri">
+                </div>
+                <div class="col-2 text-center">
+                    <label for="age" class="pb-3">Fascia d'età</label>
+                    <select class="form-select" name="age" id="age">
+                        <option value="minors">Minorenni</option>
+                        <option value="18-64">18-64</option>
+                        <option value="over65">Over 65</option>
+                    </select>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <button type="button" class="btn bg-danger btn-generator mt-5 me-3 mb-4">Genera</button>
+                    <button type="button" class="btn bg-danger btn-generator mt-5 mb-4">Annulla</button>
+                </div>
             </div>
-            <div class="col-5">
-                <label for="km" class="pb-3">Km da percorrere</label>
-                <input type="text" class="form-control" name="km" id="km" placeholder="Kilometri">
-            </div>
-            <div class="col-2">
-                <label for="age" class="pb-3">Fascia d'età</label>
-                <select class="form-select" name="age" id="age">
-                    <option value="minors">Minorenni</option>
-                    <option value="18-64">18-64</option>
-                    <option value="over65">Over 65</option>
-                </select>
-            </div>
+         </div>
+
+         <div class="container border rounded-4 mt-5">
             <div class="col-12">
-                <button type="button" class="btn bg-danger btn-generator mt-5">Genera</button>
-                <button type="button" class="btn bg-danger btn-generator mt-5">Annulla</button>
+                <div class="top-title text-center mt-3 mb-5">
+                    <h1 class="border-bottom">IL TUO BIGLIETTO</h1>
+                </div>
             </div>
-        </div>
-     </div>
+            <div class="card my-5 border-0">
+                <div class="p-4">
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr class="table-secondary">
+                            <th scope="col">Nome Passeggero</th>
+                            <th scope="col">Offerta</th>
+                            <th scope="col">Carrozza</th>
+                            <th scope="col">Codice CP</th>
+                            <th scope="col">Prezzo</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span id="passenger">...</span></td>
+                            <td>Biglietto standard</td>
+                            <td>5</td>
+                            <td>92921</td>
+                            <td><span id="price-ticket">...</span>&euro;</td>
+                          </tr>
+                        </tbody>
+                    </table>                        
+                </div>
+            </div>
+         </div>
+    </div>
 
     <script type="text/javascript" src="./js/script.js"></script>
 </body>

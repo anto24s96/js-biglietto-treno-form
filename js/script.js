@@ -28,3 +28,4 @@ button.addEventListener("click", function(){
     /* Creare un console.log per l'output finale del prezzo; */
     console.log(new_ticket.toFixed(2));
 })
+
