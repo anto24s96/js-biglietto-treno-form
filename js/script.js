@@ -27,5 +27,10 @@ button.addEventListener("click", function(){
 
     /* Creare un console.log per l'output finale del prezzo; */
     console.log(new_ticket.toFixed(2));
+
+    document.getElementById("passenger").innerText = name_surname;
+    document.getElementById("price-ticket").innerText = new_ticket.toFixed(2);
+
+    console.log(new_ticket.toFixed(2));
 })
 
