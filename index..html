@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+     <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <label for="name_surname" class="pb-3">Nome Cognome</label>
+                <input type="text" class="form-control" id="name_surname" placeholder="Nome Cognome">            
+            </div>
+            <div class="col-5">
+                <label for="km" class="pb-3">Km da percorrere</label>
+                <input type="text" class="form-control" name="km" id="km" placeholder="Kilometri">
+            </div>
+            <div class="col-2">
+                <label for="age" class="pb-3">Fascia d'età</label>
+                <select class="form-select" name="age" id="age">
+                    <option value="minors">Minorenni</option>
+                    <option value="18-64">18-64</option>
+                    <option value="over65">Over 65</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <button type="button" class="btn bg-danger btn-generator mt-5">Genera</button>
+                <button type="button" class="btn bg-danger btn-generator mt-5">Annulla</button>
+            </div>
+        </div>
+     </div>
+
     <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
